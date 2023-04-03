@@ -1,0 +1,15 @@
+void setup() {
+    pinMode(32, OUTPUT);
+
+    // esp onboard led
+    pinMode(2, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(32, HIGH);
+    digitalWrite(2, HIGH);
+    delay(3000);
+    digitalWrite(32, LOW);
+    digitalWrite(2, LOW);
+    delay(3000);
+}
