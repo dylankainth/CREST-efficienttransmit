@@ -49,13 +49,13 @@ static uint8_t btn_activated[1] = { 0x01};
 static osjob_t sendjob;
 // define the LORAWAN appeui, deveui and appkey
 // make sure to use LSB (little endian) format, so least significant byte first for the APPEUI and DEVEUI, but not the APPKEY
-static const u1_t PROGMEM APPEUI[8]= { 0x4C, 0x53, 0x60, 0x77, 0x07, 0xF9, 0x81, 0x60};
+static const u1_t PROGMEM APPEUI[8]= {};
 void os_getArtEui (u1_t* buf) { memcpy_P(buf, APPEUI, 8);}
 
-static const u1_t PROGMEM DEVEUI[8]= { 0xF7, 0x01, 0x1B, 0x0B, 0xE9, 0xF9, 0x81, 0x60 };
+static const u1_t PROGMEM DEVEUI[8]= {  };
 void os_getDevEui (u1_t* buf) { memcpy_P(buf, DEVEUI, 8);}
 
-static const u1_t PROGMEM APPKEY[16]= {0xFF, 0xF6, 0xB3, 0xB1, 0x60, 0x0A, 0x13, 0x31, 0x23, 0xBD, 0x9F, 0x65, 0x07, 0xBA, 0x21, 0x4F};
+static const u1_t PROGMEM APPKEY[16]= {};
 void os_getDevKey (u1_t* buf) {  memcpy_P(buf, APPKEY, 16);}
 
 void printHex2(unsigned v) {
